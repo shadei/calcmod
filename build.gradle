@@ -1,13 +1,13 @@
 plugins {
-	id 'fabric-loom' version '0.12-SNAPSHOT'
+	id 'fabric-loom' version '1.6-SNAPSHOT'
 	id 'maven-publish'
 }
 
-sourceCompatibility = JavaVersion.VERSION_17
-targetCompatibility = JavaVersion.VERSION_17
+sourceCompatibility = "21"
+targetCompatibility = "21"
 
 archivesBaseName = project.archives_base_name
-version = "fabric-"+project.minecraft_version+'-'+project.mod_version
+version = project.mod_version+"+fabric."+project.minecraft_version
 group = project.maven_group
 
 repositories {
@@ -35,8 +35,8 @@ dependencies {
 	modImplementation 'org.mariuszgromada.math:MathParser.org-mXparser:5.0.6'
 	include 'org.mariuszgromada.math:MathParser.org-mXparser:5.0.6'
 
-	modImplementation 'dev.xpple:clientarguments:1.6'
-	include 'dev.xpple:clientarguments:1.6'
+	modImplementation 'dev.xpple:clientarguments:1.8.2'
+	include 'dev.xpple:clientarguments:1.8.2'
 
 
 	// include 'com.ibm.icu:icu4j:71.1'
@@ -57,7 +57,7 @@ processResources {
 
 tasks.withType(JavaCompile).configureEach {
 	// Minecraft 1.18 (1.18-pre2) upwards uses Java 17.
-	it.options.release = 17
+	it.options.release = 21
 }
 
 java {

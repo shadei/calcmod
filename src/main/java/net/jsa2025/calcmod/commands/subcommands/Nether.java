@@ -3,7 +3,7 @@ package net.jsa2025.calcmod.commands.subcommands;
 
 import com.mojang.brigadier.builder.LiteralArgumentBuilder;
 
-import dev.xpple.clientarguments.arguments.CBlockPosArgumentType;
+import dev.xpple.clientarguments.arguments.CBlockPosArgument;
 import net.fabricmc.fabric.api.client.command.v2.ClientCommandManager;
 import net.fabricmc.fabric.api.client.command.v2.FabricClientCommandSource;
 import net.jsa2025.calcmod.commands.CalcCommand;
@@ -29,9 +29,9 @@ public class Nether {
             CalcMessageBuilder message = execute(ctx.getSource().getEntity().getBlockPos());
             CalcCommand.sendMessage(ctx.getSource(), message);
             return 1;
-        }).then(ClientCommandManager.argument("pos", CBlockPosArgumentType.blockPos())
+        }).then(ClientCommandManager.argument("pos", CBlockPosArgument.blockPos())
         .executes((ctx) -> {
-            BlockPos pos = CBlockPosArgumentType.getCBlockPos(ctx, "pos");
+            BlockPos pos = CBlockPosArgument.getBlockPos(ctx, "pos");
             CalcMessageBuilder message = execute(pos);
             CalcCommand.sendMessage(ctx.getSource(), message);
             return 1;
