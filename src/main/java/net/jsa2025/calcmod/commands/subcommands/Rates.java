@@ -44,7 +44,7 @@ public class Rates {
         .then(CommandManager.literal("rates").then(CommandManager.argument("numberofitems", StringArgumentType.string())
         .then(CommandManager.argument("time", StringArgumentType.greedyString())
         .executes(ctx -> {
-            CalcMessageBuilder message = execute(ctx.getSource().getEntity(), StringArgumentType.getString(ctx, "numberofitems"), StringArgumentType.getString(ctx, "time"));
+            CalcMessageBuilder message = execute(ctx.getSource().getEntity(), StringArgumentType.getString(ctx, "numberofitems"), StringArgumentType.getString(ctx, "seconds"));
             CalcCommand.sendMessageServer(ctx.getSource(), message);
             return 1;
         })))
@@ -68,7 +68,7 @@ public class Rates {
 
     public static String helpMessage = """
         §b§LRates:§r§f
-            Given a number of items and afk time in seconds §7§o(can be in expression form)§r§f, returns the number of items per hour.
-            §eUsage: /calc rates <numberofitems> <time>§f
+            When given an amount of items and a farm run time in seconds §7§o(expressions allowed)§r§f, returns the items per hour of the farm.
+            §eUsage: /calc rates <numberOfItems> <seconds>§f
                 """;
 }

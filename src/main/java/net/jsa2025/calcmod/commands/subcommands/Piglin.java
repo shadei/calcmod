@@ -99,8 +99,8 @@ public class Piglin {
 
     public static String helpMessage = """
             §b§LBarter:§r§f
-                Calculates the average amount of gold ingots to barter to get a number of a desired item §7§o(togold)§r§f, or the average amount of an item that will be recieved when bartering a number of gold ingots §7§o(toitem)§r§f.   
-                §eUsage: /calc barter togold <numberofitems> <item>§f
-                §eUsage: /calc barter toitem <amountofgold> <item>§f
+                Calculates the average number of gold ingots needed to barter for a specific quantity of a desired item §7§o(togold)§r§f, or the average number of a desired item received when bartering a specific number of gold ingots §7§o(toitem)§r§f.   
+                §eUsage: /calc barter togold <numberOfItems> <item>§f
+                §eUsage: /calc barter toitem <amountOfGold> <item>§f
                     """;
 }

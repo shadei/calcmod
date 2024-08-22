@@ -87,7 +87,7 @@ public class ItemToSb {
 
     public static String helpMessage = """
         §b§LItem to Sb:§r§f
-            Given a number of items §7§o(can be in expression form)§r§f, returns the number of Shulker Boxes.
-            §eUsage: /calc itemtosb <numberofitems>§f
-                """;
+            When given a number of items §7§o(expressions allowed)§r§f, returns how many shulker boxes those items fill.
+            §eUsage: /calc itemtosb <numberOfItems>§f
+        """;
 }

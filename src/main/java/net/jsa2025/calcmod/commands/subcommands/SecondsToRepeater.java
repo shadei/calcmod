@@ -68,7 +68,7 @@ public class SecondsToRepeater {
 
     public static String helpMessage = """
         §b§LSeconds to Repeater:§r§f
-            Given a number of seconds §7§o(can be in expression form)§r§f, returns the number of repeaters and their delay.
+            When given a time in seconds §7§o(expressions allowed)§r§f, returns the number of repeaters and their delays to achieve that time.
             §eUsage: /calc secondstorepeater <seconds>§f
-                """;
+        """;
 }

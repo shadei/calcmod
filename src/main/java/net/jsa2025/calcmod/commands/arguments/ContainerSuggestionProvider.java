@@ -14,18 +14,21 @@ import net.minecraft.server.command.ServerCommandSource;
 
 public class ContainerSuggestionProvider implements SuggestionProvider<ServerCommandSource> {
     public static final Map<String, Integer> containers = Map.ofEntries(Map.entry("shulker_box", 27),
-    Map.entry("chest", 27),
-    Map.entry("barrel", 27),
-    Map.entry("trapped_chest", 27),
-    Map.entry("double_chest", 54),
-    Map.entry("dropper", 9),
-    Map.entry("dispenser", 9),
-    Map.entry("hopper",5),
-    Map.entry("hopper_minecart", 5),
-    Map.entry("brewing_stand", 5),
-    Map.entry("furnace", 3),
-    Map.entry("blast_furnace", 3),
-    Map.entry("smoker", 3)
+            Map.entry("chest", 27),
+            Map.entry("double_chest", 54),
+            Map.entry("barrel", 27),
+            Map.entry("trapped_chest", 27),
+            Map.entry("double_trapped_chest", 54),
+            Map.entry("dropper", 9),
+            Map.entry("dispenser", 9),
+            Map.entry("hopper",5),
+            Map.entry("hopper_minecart", 5),
+            Map.entry("chest_minecart", 27),
+            Map.entry("furnace_minecart", 3),
+            Map.entry("brewing_stand", 5),
+            Map.entry("furnace", 3),
+            Map.entry("blast_furnace", 3),
+            Map.entry("smoker", 3)
     );
     
     @Override

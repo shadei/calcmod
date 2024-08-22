@@ -36,8 +36,8 @@ public class SignalToItems {
         command
         .then(ClientCommandManager.literal("signaltoitems")
         .then(ClientCommandManager.argument("container", StringArgumentType.string()).suggests(new CContainerSuggestionProvider())
-        .then(ClientCommandManager.argument("signal", StringArgumentType.greedyString()).executes((ctx) -> {
-            CalcMessageBuilder message = execute(ctx.getSource().getEntity(), StringArgumentType.getString(ctx, "container"), StringArgumentType.getString(ctx, "signal"));
+        .then(ClientCommandManager.argument("powerlevel", StringArgumentType.greedyString()).executes((ctx) -> {
+            CalcMessageBuilder message = execute(ctx.getSource().getEntity(), StringArgumentType.getString(ctx, "container"), StringArgumentType.getString(ctx, "powerlevel"));
             CalcCommand.sendMessage(ctx.getSource(), message);
             return 1;
         }))).then(ClientCommandManager.literal("help").executes(ctx -> {
@@ -53,8 +53,8 @@ public class SignalToItems {
         command
         .then(CommandManager.literal("signaltoitems")
         .then(CommandManager.argument("container", StringArgumentType.string()).suggests(new ContainerSuggestionProvider())
-        .then(CommandManager.argument("signal", StringArgumentType.greedyString()).executes((ctx) -> {
-            CalcMessageBuilder message = execute(ctx.getSource().getEntity(), StringArgumentType.getString(ctx, "container"), StringArgumentType.getString(ctx, "signal"));
+        .then(CommandManager.argument("powerlevel", StringArgumentType.greedyString()).executes((ctx) -> {
+            CalcMessageBuilder message = execute(ctx.getSource().getEntity(), StringArgumentType.getString(ctx, "container"), StringArgumentType.getString(ctx, "powerlevel"));
             CalcCommand.sendMessageServer(ctx.getSource(), message);
             return 1;
         }))).then(CommandManager.literal("help").executes(ctx -> {
@@ -92,9 +92,9 @@ public class SignalToItems {
             stackable1 = nf.format(item1);
         }
         CalcMessageBuilder message = new CalcMessageBuilder().addFromArray(new String[] {"Items required for 64 stackable: ", "result", "\nItems required for 16 stackable: ", "result", "\nItems required for non-stackable: ", "result"}, new String[] {}, new String[] {CalcCommand.getParsedStack(item64, 64), stackable16, stackable1});
-        
+
         if (strength > 15) {
-            message.addString("\n§cError: Signal Strength out of range (0, 15)");
+            message.addString("\n§cError: power level out of range (0, 15)");
         }
         return message;
        // return new String[] {"Items Required for 64 Stackable: ", CalcCommand.getParsedStack(item64, 64), "\nItems Required for 16 Stackable: ", stackable16, "\nItems Required for Non Stackable: ", stackable1};
@@ -102,9 +102,9 @@ public class SignalToItems {
 
     public static String helpMessage = """
         §b§LSignal To Items:§r§f
-           Given a container and a desired comparator signal strength §7§o(can be in expression form)§r§f, returns the number of items needed to achieve that signal strength.
-            §eUsage: /calc signaltoitems <container> <signal>§f
-                """;
+           When given a container and a desired comparator power level §7§o(expressions allowed)§r§f, returns the number of items needed to achieve that power level.
+            §eUsage: /calc signaltoitems <container> <powerLevel>§f
+        """;
 
 }
 

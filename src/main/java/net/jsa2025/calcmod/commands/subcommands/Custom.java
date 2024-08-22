@@ -262,13 +262,13 @@ public class Custom {
 
     public static String helpMessage = """
             §b§LCustom:§r§f
-                Custom functions are reusable commands that perform a specific computation. They can be run in any number field formatted with the function name and the parameters in parenthesis §7§o(customfunction(param1, paramN))§r§f.
-                Custom functions can have any number of parameters, specified in [square] brackets when adding the function.
-                §eUsage: /calc custom add <name> <function>§f
-                §eUsage: /calc custom run <name> <input>§f
-                §eUsage: /calc <name>(<parameters>)§f
+                Custom functions are reusable commands that perform a specific computation. They can be run in any number field formatted with the function name and the parameters in parenthesis §7§oe.g. functionName(param1, paramN)§r§f.
+                Custom functions can have any number of parameters, specified in [square] brackets when adding the function. §7§oNote: Using any numbers or special characters in a parameter may result in a broken function.§r§f
+                §eUsage: /calc custom add <functionName> <function>§f
+                §eUsage: /calc custom run <functionName> <input>§f
+                §eUsage: /calc <functionName>(<parameters>)§f
                 §eUsage: /calc custom list§f
-                §eUsage: /calc custom remove <name>§f
-                    """;
+                §eUsage: /calc custom remove <functionName>§f
+            """;
 
 }

@@ -64,9 +64,9 @@ public class AllayStorage {
 
     public static String helpMessage = """
         §b§LAllay Storage:§r§f
-            Given the number of items per hour of a non stackable item §7§o(can be in expression form)§r§f, returns allays needed to sort the item.
-            §eUsage: /calc allaystorage <numberofitems>§f
-            """;
+            When given an amount of non-stackable items per hour §7§o(expressions allowed)§r§f, returns the minimum number of Allays required to sort them in time.
+            §eUsage: /calc allaystorage <itemsPerHour>§f
+        """;
 
 
 }

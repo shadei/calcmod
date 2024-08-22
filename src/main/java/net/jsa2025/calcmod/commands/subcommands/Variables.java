@@ -44,26 +44,29 @@ public class Variables {
     public static CalcMessageBuilder execute() {
         String message = """
             §bVariables§f can be used inside equations in any number field. They act as shortcuts instead of having to remember that “a double chest full of 16 stackable items is 864.”
-            If no stack size is given, variables default to the stack size of each command.
+            If no stack size is given, variables default to the contextualized stack size in each command.
             
-                dub: 3456 (default)
-                dub64: 3456
-                dub16: 864
-                dub1: 54
-                sb: 1728 (default)
-                sb64: 1728
-                sb16: 432
-                sb1: 27
-                stack: 64 (default)
-                stack64: 64
-                stack16: 16
-                stack1: 1
-                min: 60
-                hour: 3600
-                x: player x coord
-                y: player y coord
-                z: player z coord
-                health: player health
+                §edub:§f 3456 §7§o(default)§r§f
+                §edub64:§f 3456
+                §edub16:§f 864
+                §edub1:§f 54
+                §esb:§f 1728 §7§o(default)§r§f
+                §esb64:§f 1728
+                §esb16:§f 432
+                §esb1:§f 27
+                §estack:§f 64 §7§o(default)§r§f
+                §estack64:§f 64
+                §estack16:§f 16
+                §estack1:§f 1
+                §emin:§f 60
+                §ehour:§f 3600
+    
+            §bDynamic Variables§f change depending on an in-game status. These can be particularly useful inside custom functions.
+                
+                §ex:§f player x coordinate
+                §ey:§f player y coordinate
+                §ez:§f player z coordinate
+                §ehealth:§f player health
                 """;
         return new CalcMessageBuilder(message);
     }

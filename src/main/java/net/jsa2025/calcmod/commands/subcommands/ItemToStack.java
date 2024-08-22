@@ -80,16 +80,16 @@ public class ItemToStack {
 
     public static CalcMessageBuilder execute(Entity player, String numberofitems, int stackSize) {
         double items = CalcCommand.getParsedExpression(player, numberofitems, stackSize);
-        double stacks = Math.floor(items/stackSize);
+        double stacks = Math.floor(items / stackSize);
         double leftover = items % stackSize;
         CalcMessageBuilder message = new CalcMessageBuilder().addInput(numberofitems).addString(" ").addInput(nf.format(stackSize)).addString(" Stackable items = ").addResult(nf.format(stacks)).addString(" Stacks + ").addResult(nf.format(leftover)).addString(" Items");
-        
+
         return message;
     }
 
     public static String helpMessage = """
-        §b§LItem to Stack:§r§f
-            Given a number of items §7§o(can be in expression form)§r§f, returns the number of stacks and remainder items.
-            §eUsage: /calc itemtostack <numberofitems>§f
-                """;
+            §b§LItem to Stack:§r§f
+                When given a number of items §7§o(expressions allowed)§r§f, returns how many stacks those items fit into, along with any remainder items.
+                §eUsage: /calc itemtostack <numberOfItems>§f
+            """;
 }

@@ -73,10 +73,9 @@ public class Overworld {
     }
 
     public static String helpMessage = """
-            §b§LOverworld:§r§f
-                Given a block position in the Nether, returns the Overworld's corresponding coordinates. If no coordinates are given, command assumes current player position.
-                §eUsage: /calc overworld <x> <y> <z>§f
-                    """;
-
+        §b§LOverworldr:§r§f
+            When given a block position in the Nether, returns the corresponding coordinates in the Overworld. If no coordinates are provided, the command uses the player’s current position.
+            §eUsage: /calc overworld <x> <y> <z>§f
+            """;
 
 }
